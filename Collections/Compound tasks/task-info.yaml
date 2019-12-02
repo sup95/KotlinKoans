@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 166
-    length: 6
+    length: 82
     placeholder_text: TODO()
     initial_state:
       length: 6
@@ -12,10 +12,10 @@ files:
     initialized_from_dependency: false
     possible_answer: return orders.filter { it.isDelivered }.flatMap { it.products
       }.maxBy { it.price }
-    selected: false
-    status: Unchecked
-  - offset: 370
-    length: 6
+    selected: true
+    status: Solved
+  - offset: 442
+    length: 90
     placeholder_text: TODO()
     initial_state:
       length: 6
@@ -23,9 +23,9 @@ files:
     initialized_from_dependency: false
     possible_answer: return customers.flatMap { it.getOrderedProductsList() }.count
       { it == product }
-    selected: false
-    status: Unchecked
-  - offset: 380
+    selected: true
+    status: Solved
+  - offset: 536
     length: 10
     placeholder_text: /* TODO */
     initial_state:
@@ -36,8 +36,8 @@ files:
       fun Customer.getOrderedProductsList(): List<Product> {
           return orders.flatMap { it.products }
       }
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
   text: |
     // Return the most expensive product among all delivered products
     // (use the Order.isDelivered flag)
@@ -168,5 +168,5 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Solved
 record: -1
